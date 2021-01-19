@@ -1,0 +1,14 @@
+# https://kubernetes.io/docs/concepts/services-networking/service/
+apiVersion: v1
+kind: Service
+metadata:
+  name: client-cluster-ip-service
+  namespace: default
+spec:
+  type: ClusterIP
+  selector:
+    component: web
+  ports:
+  - protocol: TCP
+    port: 3000
+    targetPort: 3000
