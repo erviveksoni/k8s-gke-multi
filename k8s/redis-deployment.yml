@@ -25,13 +25,6 @@ spec:
       - name:  redis
         image:  redis:latest
         imagePullPolicy: Always
-        resources:
-          requests:
-            cpu: 100m
-            memory: 100Mi
-          limits:
-            cpu: 100m
-            memory: 100Mi
         ports:
           - containerPort:  6379
       restartPolicy: Always
